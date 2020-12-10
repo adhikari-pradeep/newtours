@@ -1,0 +1,17 @@
+com\qa\newtours\listeners\ExtentReportListener.class
+com\qa\newtours\utils\OptionsManager.class
+com\qa\newtours\base\BaseTest.class
+com\qa\newtours\base\BasePage.class
+com\qa\newtours\pages\LoginPage.class
+com\qa\newtours\utils\ExcelUtil.class
+com\qa\newtours\pages\FlightsPage.class
+com\qa\newtours\listeners\TesultsListener.class
+com\qa\newtours\utils\Constants.class
+com\qa\newtours\listeners\TestAllureListener.class
+com\qa\newtours\pages\ContactsPage.class
+com\qa\newtours\utils\ElementUtil.class
+com\qa\newtours\utils\JavaScriptUtil.class
+com\qa\newtours\listeners\ScreenshotListener.class
+com\qa\newtours\pages\RegisterPage.class
+com\qa\newtours\listeners\pdfListener.class
+com\qa\newtours\pages\HomePage.class
