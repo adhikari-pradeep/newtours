@@ -1,98 +1,86 @@
-pipeline
-{
-	agent any
-	stages
-	{
-		stage('Build')
-		{
-			steps
-			{
-				echo "Build is Started"
-				bat "mvn clean package -PRegression -DskipTests=true"
-				echo "Build is Successful"
-			}
-		}
-		stage('SonarQube Analysis')
-		{
-			steps
-			{
-				echo "SonarQube Test is Started"
-				bat 'mvn sonar:sonar -Dsonar.projectName=MavenHybridFramework -Dsonar.host.url=http://localhost:9000 -Dlicense.skip=true'
-				echo "SonarQube Test is Successful"
-			}
-		}
-		stage('Smoke TestSuite')
-		{
-			parallel
-			{
-				stage('Chrome')
-				{
-					steps
-					{
-						echo "Smoke Test Execution is Started in Chrome"
-						bat "mvn test -PSmoke -DBrowser=Chrome"
-						echo "Smoke Test Execution is Successful in Chrome"
-					}
-				}
-				stage('Firefox')
-				{
-					steps
-					{
-						echo "Smoke Test Execution is Started in Firefox"
-						bat "mvn test -PSmoke -DskipTests=true"
-						echo "Smoke Test Execution is Successful in Firefox"
-					}
-				}
-			}
-		}
-		stage('Regression TestSuite')
-		{
-			parallel
-			{
-				stage('Chrome')
-				{
-					steps
-					{
-						echo "Regression Test Execution is Started in Chrome"
-						bat "mvn test -PRegression -DBrowser=Chrome"
-						echo "Regression Test Execution is Successful in Chrome"
-					}
-				}
-				stage('Firefox')
-				{
-					steps
-					{
-						echo "Regression Test Execution is Started in Firefox"
-						bat "mvn test -PRegression -DskipTests=true"
-						echo "Regression Test Execution is Successful in Firefox"
-					}
-				}
-			}
-		}
-		stage('Publish Reports')
-		{
-			parallel
-			{
-				stage('Extent Report')
-				{
-					steps
-					{
-						publishHTML([
-						allowMissing: false, 
-            					alwaysLinkToLastBuild: true, 
-            					keepAll: false, 
-						reportDir: 'D:\\Automation_Workspace\\MavenHybridFramework\\CRMExtentResults\\', 
-            					reportFiles: 'CRMExtentReport*.html', 
-            					reportName: 'Extent HTML Report', 
-            					reportTitles: ''])
-					}
-				}
-				stage('Allure Report')
-				{
-					steps
-					{
-						echo "Allure Report is yet to be implemented"
-					}
-				}
-			}
-		}	}
+pipeline {
+  agent any
+  stages {
+    stage('Build Dev') {
+      parallel {
+        stage('Build Dev') {
+          steps {
+            sh 'mvn clean install -DskipTests=true'
+          }
+        }
+
+        stage('chrome') {
+          steps {
+            sh 'mvn test -Denv=qa -Dbrowser=chrome'
+          }
+        }
+
+      }
+    }
+
+    stage('Build QA') {
+      parallel {
+        stage('Build QA') {
+          steps {
+            sh 'mvn clean install -DskipTests=true'
+          }
+        }
+
+        stage('chrome') {
+          steps {
+            sh 'mvn test -Denv=qa -Dbrowser=chrome'
+          }
+        }
+
+        stage('firefox') {
+          steps {
+            sh 'mvn test -Denv=qa -Dbrowser=firefox'
+          }
+        }
+
+      }
+    }
+
+    stage('Build Stage') {
+      parallel {
+        stage('Build Stage') {
+          steps {
+            sh 'mvn clean install -DskipTests=true'
+          }
+        }
+
+        stage('firefox') {
+          steps {
+            sh 'mvn test -Denv=qa -Dbrowser=firefox'
+          }
+        }
+
+        stage('chrome') {
+          steps {
+            sh 'mvn test -Denv=qa -Dbrowser=chrome'
+          }
+        }
+
+      }
+    }
+
+    stage('Publish reports') {
+      steps {
+        script {
+          allure([
+            includeProperties: false,
+            jdk: '',
+            properties: [],
+            reportBuildPolicy: 'ALWAYS',
+            results: [[path: '/allure-results']]
+          ])
+        }
+
+      }
+    }
+
+  }
+  tools {
+    maven 'M3'
+  }
+}
