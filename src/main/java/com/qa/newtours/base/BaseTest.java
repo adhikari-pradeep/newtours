@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.qa.newtours.pages.ContactsPage;
 import com.qa.newtours.pages.HomePage;
 import com.qa.newtours.pages.LoginPage;
+import com.qa.newtours.pages.RegisterPage;
 
 
 public class BaseTest {
@@ -21,6 +22,7 @@ public class BaseTest {
 	public LoginPage loginPage;
 	public HomePage homePage;
 	public ContactsPage contactsPage;
+	public RegisterPage registerPage;
 	
 	
 	@Parameters("browser")

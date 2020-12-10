@@ -59,4 +59,11 @@ public class LoginPage extends BasePage{
 
 	
 		}
+		
+		
+		@Step("getting sign up link exist on login page")
+		public RegisterPage doClickRegister() {
+			elementUtil.doClick(signUpLink);
+			return new RegisterPage(driver);
+		}
 }

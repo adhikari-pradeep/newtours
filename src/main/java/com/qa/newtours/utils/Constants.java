@@ -8,6 +8,7 @@ public class Constants {
 	
 	public static final String HOME_PAGE_HEADER = "Setup Guide";
 	public static final String CONTACTS_PAGE_HEADER = "Contacts";
+	public static final String USER_REGISTRATION_MESSAGE = "Note: Your user name is bemsid.";
 	
 	
 
