@@ -146,7 +146,7 @@ public class BasePage {
 			System.out.println("Running on Enviroment: " + env);
 			if (env == null) {
 				path = "./src/main/java/com/qa/newtours/config/config.properties";
-				System.out.println("Running on Enviroment : " + "PROD");
+				System.out.println("Running on Enviroment : " + env);
 			} else {
 				switch (env) {
 				case "qa":
