@@ -6,9 +6,9 @@
     <classes>
       <class name="com.qa.newtours.test.RegisterPageTest">
         <methods>
-          <include name="registratioPAgeSetup"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="userRegistrationTest"/>
           <include name="registrationMessage"/>
         </methods>
       </class> <!-- com.qa.newtours.test.RegisterPageTest -->
@@ -19,9 +19,9 @@
     <classes>
       <class name="com.qa.newtours.test.RegisterPageTest">
         <methods>
-          <include name="registratioPAgeSetup"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="userRegistrationTest"/>
           <include name="registrationMessage"/>
         </methods>
       </class> <!-- com.qa.newtours.test.RegisterPageTest -->

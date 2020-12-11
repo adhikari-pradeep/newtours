@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="75061" started-at="2020-12-10T21:18:50Z" finished-at="2020-12-10T21:20:05Z">
+  <suite name="Suite" duration-ms="51514" started-at="2020-12-11T05:21:01Z" finished-at="2020-12-11T05:21:52Z">
     <groups>
     </groups>
-    <test name="Registration Test Chrome" duration-ms="43377" started-at="2020-12-10T21:18:50Z" finished-at="2020-12-10T21:19:33Z">
-      <class name="com.qa.newtours.test.RegisterPageTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.qa.newtours.test.RegisterPageTest@5ad10c1a]" name="setUp" is-config="true" duration-ms="12309" started-at="2020-12-10T21:18:50Z" finished-at="2020-12-10T21:19:02Z">
+    <test name="Login page Test - Chrome" duration-ms="26702" started-at="2020-12-11T05:21:01Z" finished-at="2020-12-11T05:21:27Z">
+      <class name="com.qa.newtours.test.LoginPageTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.qa.newtours.test.LoginPageTest@76adb233]" name="setUp" is-config="true" duration-ms="9190" started-at="2020-12-11T05:21:01Z" finished-at="2020-12-11T05:21:10Z">
           <params>
             <param index="0">
               <value>
@@ -18,27 +18,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="registratioPAgeSetup()[pri:0, instance:com.qa.newtours.test.RegisterPageTest@5ad10c1a]" name="registratioPAgeSetup" is-config="true" duration-ms="10264" started-at="2020-12-10T21:19:02Z" finished-at="2020-12-10T21:19:13Z">
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.newtours.test.LoginPageTest@76adb233]" name="verifyLoginPageTitleTest" duration-ms="308" started-at="2020-12-11T05:21:10Z" finished-at="2020-12-11T05:21:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registratioPAgeSetup -->
-        <test-method status="PASS" signature="userRegistrationTest()[pri:1, instance:com.qa.newtours.test.RegisterPageTest@5ad10c1a]" name="userRegistrationTest" duration-ms="18002" started-at="2020-12-10T21:19:13Z" finished-at="2020-12-10T21:19:31Z">
+        </test-method> <!-- verifyLoginPageTitleTest -->
+        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.newtours.test.LoginPageTest@76adb233]" name="verifySignUpLinkTest" duration-ms="4112" started-at="2020-12-11T05:21:11Z" finished-at="2020-12-11T05:21:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userRegistrationTest -->
-        <test-method status="PASS" signature="registrationMessage()[pri:2, instance:com.qa.newtours.test.RegisterPageTest@5ad10c1a]" name="registrationMessage" duration-ms="1108" started-at="2020-12-10T21:19:31Z" finished-at="2020-12-10T21:19:32Z">
+        </test-method> <!-- verifySignUpLinkTest -->
+        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.qa.newtours.test.LoginPageTest@76adb233]" name="loginTest" duration-ms="11536" started-at="2020-12-11T05:21:15Z" finished-at="2020-12-11T05:21:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registrationMessage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.newtours.test.RegisterPageTest@5ad10c1a]" name="tearDown" is-config="true" duration-ms="1077" started-at="2020-12-10T21:19:32Z" finished-at="2020-12-10T21:19:33Z">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.newtours.test.LoginPageTest@76adb233]" name="tearDown" is-config="true" duration-ms="1164" started-at="2020-12-11T05:21:26Z" finished-at="2020-12-11T05:21:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.newtours.test.RegisterPageTest -->
-    </test> <!-- Registration Test Chrome -->
-    <test name="Registration Test firefox" duration-ms="75061" started-at="2020-12-10T21:18:50Z" finished-at="2020-12-10T21:20:05Z">
-      <class name="com.qa.newtours.test.RegisterPageTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.qa.newtours.test.RegisterPageTest@1252b961]" name="setUp" is-config="true" duration-ms="48996" started-at="2020-12-10T21:18:50Z" finished-at="2020-12-10T21:19:39Z">
+      </class> <!-- com.qa.newtours.test.LoginPageTest -->
+    </test> <!-- Login page Test - Chrome -->
+    <test name="Login page Test --FF" duration-ms="51514" started-at="2020-12-11T05:21:01Z" finished-at="2020-12-11T05:21:52Z">
+      <class name="com.qa.newtours.test.LoginPageTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.qa.newtours.test.LoginPageTest@22d6cac2]" name="setUp" is-config="true" duration-ms="29902" started-at="2020-12-11T05:21:01Z" finished-at="2020-12-11T05:21:31Z">
           <params>
             <param index="0">
               <value>
@@ -49,23 +49,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="registratioPAgeSetup()[pri:0, instance:com.qa.newtours.test.RegisterPageTest@1252b961]" name="registratioPAgeSetup" is-config="true" duration-ms="3712" started-at="2020-12-10T21:19:39Z" finished-at="2020-12-10T21:19:43Z">
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.newtours.test.LoginPageTest@22d6cac2]" name="verifyLoginPageTitleTest" duration-ms="72" started-at="2020-12-11T05:21:31Z" finished-at="2020-12-11T05:21:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registratioPAgeSetup -->
-        <test-method status="PASS" signature="userRegistrationTest()[pri:1, instance:com.qa.newtours.test.RegisterPageTest@1252b961]" name="userRegistrationTest" duration-ms="15342" started-at="2020-12-10T21:19:43Z" finished-at="2020-12-10T21:19:58Z">
+        </test-method> <!-- verifyLoginPageTitleTest -->
+        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.newtours.test.LoginPageTest@22d6cac2]" name="verifySignUpLinkTest" duration-ms="1756" started-at="2020-12-11T05:21:31Z" finished-at="2020-12-11T05:21:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userRegistrationTest -->
-        <test-method status="PASS" signature="registrationMessage()[pri:2, instance:com.qa.newtours.test.RegisterPageTest@1252b961]" name="registrationMessage" duration-ms="888" started-at="2020-12-10T21:19:58Z" finished-at="2020-12-10T21:19:59Z">
+        </test-method> <!-- verifySignUpLinkTest -->
+        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.qa.newtours.test.LoginPageTest@22d6cac2]" name="loginTest" duration-ms="5761" started-at="2020-12-11T05:21:32Z" finished-at="2020-12-11T05:21:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registrationMessage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.newtours.test.RegisterPageTest@1252b961]" name="tearDown" is-config="true" duration-ms="6091" started-at="2020-12-10T21:19:59Z" finished-at="2020-12-10T21:20:05Z">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.newtours.test.LoginPageTest@22d6cac2]" name="tearDown" is-config="true" duration-ms="13990" started-at="2020-12-11T05:21:38Z" finished-at="2020-12-11T05:21:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.newtours.test.RegisterPageTest -->
-    </test> <!-- Registration Test firefox -->
+      </class> <!-- com.qa.newtours.test.LoginPageTest -->
+    </test> <!-- Login page Test -FF -->
   </suite> <!-- Suite -->
 </testng-results>
